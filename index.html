@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jiangqi Dai</title>
+  <meta name="description" content="test" />
+  <link rel="icon" href="assets/favicon.png" />
+
+  <!-- Open Graph / Social preview (optional) -->
+  <meta property="og:title" content="Jiangqi Dai" />
+  <meta property="og:description" content="test" />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:url" content="https://jqdai23.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Minimal, accessible, no-framework styles -->
+  <style>
+    :root{
+      --bg: #ffffff;
+      --text: #111111;
+      --muted: #4b5563;
+      --card: #f8fafc;
+      --border: #e5e7eb;
+      --primary: #1e40af; /* tweak to taste */
+      --link: #0ea5e9;
+      --shadow: 0 6px 24px rgba(0,0,0,.06);
+      --radius: 12px;
+      --maxw: 960px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #0b1020;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --card: #0f172a;
+        --border: #1f2937;
+        --link: #38bdf8;
+        --primary: #93c5fd;
+        --shadow: 0 6px 24px rgba(0,0,0,.35);
+      }
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif}
+    .container{max-width:var(--maxw);margin:auto;padding:24px}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .skip{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip:focus{position:static;width:auto;height:auto;padding:8px;background:var(--card);border-radius:6px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0 24px}
+    .brand{font-weight:700;font-size:1.125rem}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+    nav a{color:var(--text);opacity:.85}
+    nav a:hover{opacity:1}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 180px;gap:24px;align-items:center;padding:24px;border:1px solid var(--border);background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero h1{font-size:2rem;line-height:1.1;margin:0 0 8px}
+    .hero p{margin:.25rem 0;color:var(--muted)}
+    .headshot{width:180px;height:180px;object-fit:cover;border-radius:50%;border:1px solid var(--border)}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chip{font-size:.85rem;border:1px solid var(--border);padding:6px 10px;border-radius:999px;background:transparent}
+    .cta{margin-top:14px;display:flex;flex-wrap:wrap;gap:10px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:#fff;color:#111}
+    .btn:hover{text-decoration:none;box-shadow:var(--shadow)}
+    @media (prefers-color-scheme: dark){ .btn{background:#111827;color:#e5e7eb}}
+
+    /* Sections */
+    section{padding:36px 0;border-bottom:1px solid var(--border)}
+    section:last-of-type{border-bottom:0}
+    section h2{font-size:1.4rem;margin:0 0 14px}
+    .muted{color:var(--muted)}
+
+    /* Two-column helper */
+    .split{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    @media (max-width:820px){ .hero{grid-template-columns:1fr} .split{grid-template-columns:1fr}}
+
+    /* Lists */
+    .list{display:grid;gap:16px}
+    .pub{padding:16px;border:1px solid var(--border);border-radius:var(--radius);background:transparent}
+    .pub h3{margin:.2rem 0 .4rem;font-size:1.02rem}
+    .meta{font-size:.92rem;color:var(--muted)}
+    .links{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .tag{display:inline-block;font-size:.78rem;border:1px solid var(--border);padding:4px 8px;border-radius:8px}
+    details{margin-top:8px}
+    summary{cursor:pointer}
+
+    /* Grid cards */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:980px){ .grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){ .grid{grid-template-columns:1fr}}
+    .card{padding:16px;border:1px solid var(--border);border-radius:var(--radius);background:transparent}
+    .card h3{margin:.2rem 0 .35rem;font-size:1.02rem}
+
+    footer{padding:32px 0;color:var(--muted);font-size:.92rem}
+    .right{display:flex;gap:10px;align-items:center}
+    .iconbtn{border:1px solid var(--border);padding:8px 10px;border-radius:10px;background:transparent}
+  </style>
+
+  <!-- Structured data (optional but nice for SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Jiangqi Dai",
+    "affiliation":{"@type":"CollegeOrUniversity","name":"Massachusetts Institute of Technology"},
+    "jobTitle":"Undergraduate Researcher",
+    "url":"https://jqdai23.github.io/",
+    "email":"jqdai@mit.edu",
+    "sameAs":[
+      "https://github.com/jqdai23"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <div class="container">
+    <header aria-label="Primary">
+      <div class="brand">Jiangqi Dai</div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="btn" href="assets/CV.pdf">CV</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content">
+      <!-- Hero -->
+      <section id="about" aria-label="Intro">
+        <div class="hero">
+          <div>
+            <h1>TEST, TEST TEST.</h1>
+            <p class="muted">Test test test. Test test test test test test, test test test test test test test.</p>
+
+            <div class="chips" aria-label="Research areas">
+              <span class="chip">Test Test</span>
+              <span class="chip">Test Test Test</span>
+            </div>
+
+            <div class="cta">
+              <a class="btn" href="mailto:jqdai@mit.edu">Email</a>
+              <a class="btn" href="https://github.com/jqdai23">GitHub</a>
+            </div>
+          </div>
+
+          <img class="headshot" src="assets/profile.jpg" alt="Portrait of Jiangqi Dai" />
+        </div>
+      </section>
+
+      <!-- Updates + Research summary -->
+      <section aria-label="Overview">
+        <div class="split">
+          <div>
+            <h2>Research</h2>
+            <p>Test test test test test, test test test test test test. Test test test.</p>
+            <p class="muted">Test test test test test test, test test test test.</p>
+          </div>
+          <div>
+            <h2>News</h2>
+            <ul class="list" aria-label="Recent updates">
+              <li>Test Test - Test.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Publications -->
+      <section id="publications" aria-label="Publications">
+        <h2>Selected Publications</h2>
+        <input id="pub-search" type="search" placeholder="Filter by keyword, venue, or year…" aria-label="Filter publications" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:10px;margin-bottom:12px;background:transparent;color:var(--text)">
+        <div class="list" id="pub-list">
+          <!-- Duplicate/modify this block per paper -->
+          <article class="pub" data-tags="test test test">
+            <h3><a href="#">Test Test Test: Test Test Test Test Test</a></h3>
+            <div class="meta">Test Test Test</div>
+            <div class="links">
+              <a href="#" class="tag">Paper (PDF)</a>
+              <a href="#" class="tag">Code</a>
+              <a href="#" class="tag">Talk</a>
+            </div>
+            <details>
+              <summary>BibTeX</summary>
+<pre>@article{Test}</pre>
+            </details>
+          </article>
+
+          <!-- /paper -->
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" aria-label="Projects">
+        <h2>Projects</h2>
+        <div class="grid">
+          <div class="card" data-tags="TEST">
+            <h3><a href="#">TestTest</a></h3>
+            <p class="muted">Test test test (test, test, test) test test.</p>
+            <div class="links">
+              <a href="#" class="tag">Code</a>
+              <a href="#" class="tag">Docs</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Awards -->
+      <section id="awards" aria-label="Awards">
+        <h2>Awards</h2>
+        <ul class="list">
+          <li>Test test: test</li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" aria-label="Contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:jqdai@mit.edu">jqdai@mit.edu</a></p>
+        <p class="muted">Test test test, test, test test.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="split">
+        <div>© <span id="year"></span> Jiangqi Dai • Last updated <span id="updated"></span></div>
+        <div class="right">
+          <button class="iconbtn" id="theme-toggle" aria-label="Toggle theme">Toggle theme</button>
+          <a class="iconbtn" href="#top">Back to top</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Minimal JS: search filter, theme toggle, dates -->
+  <script>
+    // Publication filter
+    const input = document.getElementById('pub-search');
+    const items = Array.from(document.querySelectorAll('#pub-list .pub'));
+    input?.addEventListener('input', () => {
+      const q = input.value.trim().toLowerCase();
+      items.forEach(el => {
+        const hay = (el.textContent + ' ' + (el.dataset.tags || '')).toLowerCase();
+        el.style.display = hay.includes(q) ? '' : 'none';
+      });
+    });
+
+    // Theme toggle (respects system, then user choice)
+    const toggle = document.getElementById('theme-toggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const applyTheme = (mode) => document.documentElement.dataset.theme = mode;
+    const saved = localStorage.getItem('theme');
+    if (saved) applyTheme(saved);
+    toggle?.addEventListener('click', () => {
+      const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+      applyTheme(next);
+      localStorage.setItem('theme', next);
+    });
+    // If using data-theme, you can extend CSS to style per theme, but
+    // we keep styles simple and rely on prefers-color-scheme by default.
+
+    // Footer dates
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('updated').textContent = new Date(document.lastModified).toLocaleDateString(undefined, {year:'numeric', month:'short', day:'2-digit'});
+  </script>
+
+  <!-- MathJax (optional; uncomment if you need LaTeX)
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  -->
+</body>
+</html>
